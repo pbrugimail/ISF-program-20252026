@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Menu interactif avec recherche</title>
+
+<style>
+  body { font-family: Arial, sans-serif; margin: 30px; }
+  .accordion {
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+      padding: 5px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      margin-bottom: 1px;
+      border-radius: 1px;
+      transition: background-color 0.3s;
+  }
+  .accordion:hover { background-color: #0056b3; }
+  .panel {
+      padding: 0 15px;
+      display: none;
+      background-color: #f1f1f1;
+      overflow: hidden;
+      border-left: 3px solid #007BFF;
+      border-radius: 0 0 5px 5px;
+      margin-bottom: 10px;
+  }
+  mark { background-color: yellow; }
+  input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-size: 16px;
+  }
+
+  /* --- Séparateur avec intitulé --- */
+  .separator-with-title {
+      text-align: center;
+      margin: 25px 0;
+      font-weight: bold;
+      color: #333;
+      position: relative;
+      font-size: 18px;
+  }
+  .separator-with-title:before,
+  .separator-with-title:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background: #ccc;
+  }
+  .separator-with-title:before { left: 0; }
+  .separator-with-title:after { right: 0; }
+</style>
+
+</head>
+<body>
+
+<h2>Programme ISF Apprentissage 2025/2026  </h2>
+
+<input type="text" id="searchBox" placeholder="Tapez un mot pour rechercher...">
+
+
+<!-- Séparateur avec intitulé -->
+<div class="separator-with-title">Tronc Commun </div>
+
+<!-- Rubrique 1 -->
+<button class="accordion">S3: Processus Stochastiques (30h) - Emmanuel Lepinette (Dauphine)</button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>1. Intégrale stochastique<br>2. EDS et théorèmes de représentation<br>3. EDSR et théorèmes de représentation<br>4. Application au contrôle stochastique<br><br>Pré-requis recommandés :<br>Notions de: processus stochastique, filtrations, martingales ; Notion de: équation différentielle, équation aux dérivées partielles<br><br>Pré-requis obligatoire :<br>Calcul de probabilités (bases de la théorie de la mesure, notion d'espérance conditionnelle, modes de convergence des variables aléatoires)<br><br>Compétences à acquérir :<br>Approfondir les notions de processus stochastiques, équations différentielles stochastiques progressives (EDS) et rétrogrades (EDSR), lien avec les équations aux dérivées partielles (e.d.p) et application au contrôle stochastique<br><br>Mode de contrôle des connaissances :<br>Examen<br></p>
+</div>
+<button class="accordion">S3: Méthodes Actuarielles (21h) - Marc Domange (ACPR - Banque de France)</button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>1. Instruments et marchés (marchés monétaires, marchés obligataires)<br>2. Mesure et couverture du risque de taux (duration, convexité, ACP)<br>3. Reconstitution de la structure par terme des taux (modèles à splines, modèles paramétriques)<br>4. Théories de la structure par terme des taux (anticipations pures, prime de risque pure, segmentation, anticipations biaisées)<br>5. Gestion passive (tracking error, échantillonnage stratifié)<br>6. Gestion active (roll-down, barbell, bullet, butterfly)<br>7. Produits dérivés de taux (futures & swaps)<br><br>Compétences à acquérir :<br>Fournir une explication détaillée de la structure par terme des taux et apporter un éclairage sur les différentes stratégies de gestion et leur mise en œuvre.<br></p>
+</div>
+<button class="accordion">S3: Introduction à l'assurance vie et non vie (21h) - Michel Germain (ACPR Banque de France)</button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>1. Définir les termes et les acteurs d’une opération d’assurance<br>2. Donner des éléments statistiques sur le secteur de l’assurance<br>3. Rappeler des éléments de probabilité et de mathématiques financières<br>4. Déterminer la tarification des engagements vie et non vie<br>5. Exposer les formes de garanties proposées en vie et en non vie<br>6. Calculer les engagements techniques des contrats d'assurance<br>7. Étudier la gestion du risque au niveau de l’organisme assureur<br>8. Donner des notions de comptabilité et de réglementation propre à l'assurance<br>9. Présenter les principes de la réassurance<br>10. Étudier la notion de solvabilité d’un organisme assureur et quelques éléments prudentiels<br><br>Compétences à acquérir :<br>Présenter les principaux modèles de l’assurance vie et non vie.<br></p>
+</div>
+<button class="accordion">S3: Solvabilité 2 (18h) - Louis Anselme De Lamaze (Actuelia) </button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>1. Introduction au contexte de solvabilité<br>2. Présentation du calcul de solvabilité<br>3. Dispositifs de gestion des risques (ORSA)<br>4. Analyse prospective & introduction à l’appétence aux risques<br><br>Compétences à acquérir :<br>Fournir aux étudiants des connaissances sur le contrôle prudentiel des organismes d’assurances. Leur permettra d’appréhender la complexité des problèmes comptables et les mécanismes d’évaluation du ratio de solvabilité. Le fonctionnement et l’approche de la gestion des risques dans le secteur de l’assurance seront présentés dans ce nouveau contexte.<br></p>
+</div>
+<button class="accordion">S3: Méthodologie en gestion globale des risques (21h) : VaR - Denis Bertin (BNP Paribas)</button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>1. Introduction et définition de la Value at Risk<br>2. Méthodes et méthodologies de calcul<br>3. Choix de distribution de probabilité pour positions optionnelles<br>4. Mesure de risque de marché et RiskMetrics<br>5. Risque de crédit et exigences réglementaires<br>6. Risque de corrélation défavorable, liquidité et xVA<br>7. Expected Shortfall et VaR sur Valeurs extrêmes<br><br>Compétences à acquérir :<br>Clarifier la notion de risque et présenter les principales techniques et méthodes de VaR permettant de mesurer, analyser et prédire le risque.Le risque de marché fera l’objet d’’une attention particulière au travers de l’analyse de la VaR. Les méthodes de gestion globale du risque de marché lorsque les sources d’incertitudes sont multiples seront également étudiées.<br></p>
+</div>
+<button class="accordion">S3: Anglais des affaires (18h) - Catherine Piola (Dauphine) </button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>1. Présentation des concepts et outils utilisés en management de projet, illustrée par des exemples concrets portant sur des projets, notamment dans le domaine de la Data Science *.<br>2. Réalisation en groupe d’un projet de communication.<br><br>Compétences à acquérir :<br>Amener les étudiants à développer des stratégies qui leur permettent d’améliorer leurs compétences langagières, à l’écrit comme à l’oral. Un contenu lié à la recherche d’emploi et au monde du travail est abordé au moyen de simulations et d’exercices de compréhension, de production et d’écoute.<br></p>
+</div>
+<button class="accordion">S3: Introduction à l'apprentissage supervisé (commun Actuariat) (21h) - Patrice Bertrand (Dauphine)</button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>1- Analyse factorielle discriminante<br>2- Analyse discriminante linéaire et quadratique<br>3- Classification bayésienne à l ’ aide de modèles génératifs de mélange<br>4- Classifieur bayésien et classifieur bayésien naïf<br>5- Sélection de modèles de mélange parcimonieux<br>6- Arbres de décision<br>7- Forêts aléatoires<br>L'ensemble de ces méthodes enseignées est illustré par des démonstrations du logiciel R sur des jeux de données réel (principalement Analyse Discriminante linéaire et quadratique, Classification bayésienne gaussienne, Classifieur bayésien naïf, Forêts aléatoires).<br><br>Pré-requis obligatoire :<br>Algèbre Linéaire (calcul matriciel), Analyse Factorielle (cadre général et cas de l'Analyse en Composantes Principales), Théorie élémentaire des probabilités<br><br>Compétences à acquérir :<br>Ce cours présente les méthodes élémentaires d ’ apprentissage supervisé suivantes : analyse factorielle discriminante, classification bayésienne à l ’ aide de modèles génératifs de mélange, arbres de décision et forêts aléatoires. Les propriétés théoriques et différentes formulations de ces méthodes sont présentées. Leurs mises en oeuvre, ainsi que celles de leurs variantes, sont illustrées à l ’ aide de traitements de données effectués avec le logiciel R. L'objectif de ce cours est l'acquisition de la maîtrise de ces méthodes élémentaires d ’ apprentissage supervisé.<br><br>Bibliographie-lectures recommandées<br>- Benzecri, J.-P. (1980) Pratique de l ’ analyse des données. Dunod. Paris.<br>- Bouveyron, C., Celeux, G., Murphy, T., & Raftery, A. (2019) Model-Based Clustering and Classification for Data Science *: With Applications in R, Cambridge Series in Statistical and Probabilistic Mathematics, Cambridge: Cambridge University Press.<br>- Breiman,L., Friedman, J.H., Olshen,R., and Stone, C.J. (1984). Classification and Regression Trees, Wadsworth & Brooks/Cole Advanced Books & Software, Pacific California.<br>- Hastie, T., Tibshirani, R., Friedman, J. (2009) The Elements of Statistical Learning : Data Mining *, Inference, and Prediction, Second Edition, Springer Series in Statistics.<br>- James, G., Witten, D., Hastie, T., Tibshirani, R., Taylor, J., (2023) An Introduction to Statistical Learning: With Applications in Python, Springer International Publishing.<br>- Lebart, L., Piron, M. , Morineau, A. (2006) (4ème edition, refondue) Statistique Exploratoire Multidimensionnelle, 480 pages, Dunod.<br>- Saporta, G. (2006), Probabilités, Analyse des données et Statistique, 656 pages, Technip.<br></p>
+</div>
+<button class="accordion">S3: Méthodes pour les modèles de régression (21h) - Patrice Bertrand (Dauphine)      </button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>L'objectif de ce cours est de présenter aux étudiants des connaissances fondamentales, sur la régression d'un point de vue théorique ainsi que sur le code lié à ce domaine.<br>Rappels sur les projections dans un espace vectoriel.<br>Projections dans l'espace L2 des variables aléatoires de carré intégrable. Cas multi-varié.<br>Présentation de la régression linéaire avec des hypothèses minimales.<br>Risques empirique et de généralisation. Théorème de Frisch-Waugh-Lovell. Coefficients de détermination centré et non centré.<br>Propriétés statistiques des estimations MCO (Moindres Carrés Ordinaires) avec les hypothèses standard de normalité : tests sur les coefficients, théorème de Gauss-Markov. Cas où les hypothèses standard ne sont pas vérifiées : estimateur des moindres carrés généralisé, biais endogène, variables instrumentales.<br>Régularisation et sélection de modèles : régressions Ridge et Lasso, régression bayésienne et estimateur de la régression Ridge, validation croisée, critères de validation (AIC, BIC, Cp-Mallows,...).<br>Analyse de différents modèles linéaires gaussiens multivariées sous R ou Python à partir de jeux de données réelles.<br><br>Pré-requis obligatoire :<br>Notions de base en Algèbre linéaire, Probabilité et Statistiques<br><br>Compétences à acquérir :<br>A la suite de ce module, les étudiants seront capables de comprendre la régression d'un point de vue théorique et de coder les différentes procédures étudiées. Ils auront le recul nécessaire pour préselectionner des procédures adaptées à la spécifité du jeu de données et sélectionner celles ayant les meilleures performances de généralisation.<br></p>
+</div>
+<button class="accordion">S3: Introduction au Machine Learning (15h) -  Pierre Brugiere (Dauphine) </button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>1. Supervised and unsupervised learning<br>2. Calibration versus prediction: how to avoid over-fitting<br>3. Measure of the complexity of a model according to Vapnik-Chervonenkis<br>4. Vapnik-Chervonenkis ’ s inequality and the control of the prediction error<br>5. Maximum margin SVMs and Gap tolerant classifiers<br>6. C-SVMs and duality<br>7. SVMs with kernels and Mercer ’ s theorem<br>8. The simplex case<br>9. Mu-SVM, duality and reduced convex envelopes<br>10. Single class SVMs, anomaly detections and clustering<br>11. An introduction to Bootstrap, decision trees and random forests<br>12. Ridge Regression, penalization, and yield curve smoothing<br>13. The Representer theorem, Lasso, parsimony and duality.<br><br>Pré-requis recommandés :<br>Algèbre linéaire, calcul différentiel et optimisation au niveau M1<br><br>Pré-requis obligatoire :<br>Algèbre linéaire et calcul différentiel<br><br>Compétences à acquérir :<br>Théorie du statistical learning. Comprendre comment utiliser les Supports Vectors Machines pour l'apprentissage supervisé et non supervisé. Quelques application des méthodes de regressions pénalisées. Application à des problèmes de crédit et de courbe des taux.<br><br>Bibliographie-lectures recommandées<br><br>[1] Pierre Brugiere: hal.archives-ouvertes.fr/cel-01390383v2<br>[2] Wolfgang Karl Härdle, Rouslan Moro, Linda Hoffmann : Learning Machines Supporting Bankruptcy Prediction, SFB 649 Discussion Paper 2010-032<br>[3] Dave DeBarr and Harry Wechsle: Fraud Detection Using Reputation Features SVMs, and Random Forests<br>[4] Trevor Hastie, Robert Tibshirani, Jerome Friedman: The Elements of Statistical Learning<br>[5] Christopher Bishop: Pattern Recognition and Machine Learning<br>[6] Andriy Burkov: The Hundred-Page Machine Learning Book<br></p>
+</div>
+<button class="accordion">S3: Deep Learning (18h) -  Gabriel Turinici (Dauphine)   </button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>1/ Deep learning : applications majeures, références, culture<br>2/ Types d’approches: supervisé, renforcement, non-supervisé<br>3/ Réseaux neuronaux: présentation des objets: neurones, opérations, fonction loss, optimisation, architecture<br>4/ Focus sur les algorithmes d’optimisation stochastique, preuve de convergence de SGD<br>5/ Réseaux convolutifs (CNN) : filtres, couches, architectures<br>6/ Technique: back-propagation, régularisation, hyperparamètres<br>7/ Réseaux pour des séquences : RNN, LSTM, Attention, Transformer<br>8/ Réseaux génératifs (GAN, VAE)<br>9/ Environnements de programmation pour réseaux neuronaux: Tensorflow, Keras, PyTorch et travail sur les exemples vus en cours<br>10/ Stable diffusion, LLM<br>11/ Perspectives étiques et d'alignement<br><br>Pré-requis obligatoire :<br>python, mathématiques : algèbre, probabilités, analyse numérique<br><br>Compétences à acquérir :<br>introduction au deep learning<br><br>En savoir plus sur le cours :<br>turinici.com<br><br>Bibliographie-lectures recommandées<br>turinici.com<br></p>
+</div>
+<button class="accordion">S3: Decentralized and Crypto Finance : new era of financial services (15h) - Remy Oczan (Crypto4All)     </button>
+<div class="panel">
+  <p><br></p>
+</div>
+<button class="accordion">S3: SAS, R et Python (24h) - Laurent Allo (Allianz) et Gregoire de Lassence (SAS) </button>
+<div class="panel">
+  <p><br></p>
+</div>
+<button class="accordion">S4: Pratique des options (18h) - Bertrand Faucher (BNP Paribas)</button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>1. Mise en situation concrète du métier de trading (market making)<br>2. Pricing des options complexes à partir de celui des options vanilles<br>3. Les risques dans la vraie vie<br>4. Au-delà des grecques<br><br>Compétences à acquérir :<br>- Comprendre les responsabilités d’un market maker d’options - Maîtriser les implications concrètes au-delà des équations de la gestion d’un portefeuille d’options - Acquérir des réflexes afin de repérer rapidement les principales sources de risques<br></p>
+</div>
+<button class="accordion">S4: Culture Financière & Pratique de Bloomberg (15h) - P Brugière (Dauphine) D Bertin (BNPParibas) </button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>1. Le bilan d’une entreprise et les différentes catégories de titres<br>2. Les actions, la dette, la dette hybride, le Tier 1, le Tier 2, le Tier 3<br>3. Les obligations convertibles, les mandatory convertibles<br>4. Les opérations en capital, les augmentations de capital, les FRESHs ; les Cocos<br>5. Les rachats d’actions, simples ou structurés<br>6. Les dividendes cash ou scrip, formules d’ajustements des dérivés<br>7. Les activités ECM, DCM, EQL, M&A<br>8. Séances pratiques sur Bloomberg : · construction de tableaux de bords en temps réel (BDP) · analyses historiques (BDH) · analyse financière · spreadsheets et templates Bloomberg<br><br>Compétences à acquérir :<br>Connaitre les principales notions de corporate finance, analyser des données financières sur Bloomberg, faire un mini projet en gestion de portefeuille<br></p>
+</div>
+<button class="accordion">S4: Python et Pratique de la  Data Science (21h) - Pierre Fihey </button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>Préparation des données, EDA. Traitement des classes déséquilibrées<br>Scrapping de données<br>Apprentissage non supervisé (Clustering, Réduction de dimensions)<br>Apprentissage supervisé (Classification, Régression)<br>Deep Learning (ANN, RNN, LSTM)<br>Natural Language Processing (De Bag Of Words aux Transformers)<br>L'objectif de ce cours est de rappeler la théorie derrière les principaux algorithmes de ML, Deep Learning et NLP avant de mettre en pratique l'ensemble de ces algorithmes dans un projet appliqué à la prédictions de mouvements de stocks financiers.<br><br>Compétences à acquérir :<br>Connaissances des principaux algorithmes de Machine Learning *, Deep Learning et Natural Language Processing.<br>Savoir implémenter ces méthodes et comparer leurs performances. Projet combinant l'ensemble de ces méthodes, appliqué à la finance.<br><br>Mode de contrôle des connaissances :<br>Projet (Code + Rapport)<br></p>
+</div>
+<button class="accordion">S4: Mémoire et Conduite de projet (18h) - Olivier Soussan (Consult), Pierre Brugiere (Dauphine)  </button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>1. Présentation des concepts et outils utilisés en management de projet, illustrée par des exemples concrets portant sur des projets, notamment dans le domaine de la Data Science *.<br>2. Réaliser en groupe un projet de communication (maintien du site web, présence sur les réseaux sociaux, brochure du master, participation à des forums)<br>3. Exposer en public son mémoire d’apprentissage<br><br>Coefficient : 12 (mémoire) + 3 (projets)<br><br>Compétences à acquérir :<br>Familiariser les étudiants aux méthodes de communication dans le cadre d’un projet concret et leur apprendre les bases de la communication en entreprise (oral et écrit).<br>Suivre le mémoire d’apprentissage<br><br>Mode de contrôle des connaissances :<br>Controle continu + mémoire en fin d'année<br></p>
+</div>
+
+
+
+
+<!-- Séparateur avec intitulé -->
+<div class="separator-with-title">Parcours Quantification des Risques Financiers </div>
+
+<!-- Rubrique 2 -->
+<button class="accordion">S3 (parcours QRF): Modèlisation stochastique du risque de credit (21h) - Emmanuel Lepinette  (Dauphine)   </button>
+<div class="panel">
+  <p><br></p>
+</div>
+<button class="accordion">S3 (parcours QRF): Statistique et dynamique des produits dérivés  (21h) -  Gabriel Turinici (Dauphine)      </button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>1/ Approches en probabilité historique (gestion de portefeuille classique), portefeuilles optimaux, beta, arbitrage, APT<br>2/ Valuation de produits dérivés et probabilité risque neutre<br>3/ Delta hedging en pratique, trading de volatilité<br>4/ Assurance du portefeuille: stop-loss, options, CPPI, CRP - Constant Mix<br>5/ Options exotiques ou cachées: ETF short,<br>6/ Si le temps permet: approches machine learning * en gestion dynamique du portefeuille<br><br>Pré-requis recommandés :<br>python, calcul stochastique, produits dérivés<br><br>Compétences à acquérir :<br>approche pratique et empirique des produits dérivés et de la gestion de risques tout en se basant sur une formalisation stochastique avancée<br><br>En savoir plus sur le cours :<br>turinici.com<br><br>Bibliographie-lectures recommandées<br>Voir turinici.com<br></p>
+</div>
+<button class="accordion">S4 (parcours QRF): Modèlisation stochastique de la courbe de taux (21h)  (commun MASEF) - Imen Ben Tahar  (Dauphine) + Wafa Mihri (Bank of America)     </button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>1. Quelques outils de calcul stochastique : rappels<br>2. Généralités sur les taux d ’ intérêt<br>3. Produits de taux classiques<br>4. Modèle LGM à un facteur<br>5. Modèle BGM (Brace, Gatarek et Musiela) / Jamishidian<br>6. Modèles à volatilité stochastique<br><br>Compétences à acquérir :<br>Ce cours est consacré aux modèles de taux d’intérêts à temps continu.<br>Au travers de nombreux exemples, on décrira leurs utilisations pour évaluer les produits dérivés sur taux d’intérêt.<br></p>
+</div>
+<button class="accordion">S4 (parcours QRF): Implantation de modèles multivariés en finance et assurance  (18h) - Emmanuel Lepinette  (Dauphine)      </button>
+<div class="panel">
+  <p><br></p>
+</div>
+
+
+
+
+
+
+<!-- Séparateur avec intitulé -->
+<div class="separator-with-title">Parcours Datascience </div>
+
+<!-- Rubrique 2 -->
+<button class="accordion">S4 (parcours Datascience): Recent Advances in Data Sciences (21h) - Theo Lopes Quintas (Natixis)  </button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>Le domaine du Machine Learning * et du Deep Learning évoluant sans cesse plus rapidement, il est essentiel d'avoir des bases solides dans ces deux domaines pour naviguer dans les nombreux articles de recherche du domaine. Nous traiterons de notions réinterprétés ou présentés entre 2017 et 2023 à la lumière d'articles plus anciens.<br>Les séances serons organisée par thème :<br>Bon départ d'un réseau de neurones<br>Calibration en Machine Learning<br>Mise à jour moderne des poids d'un réseau de neurones<br>Avancées des Large Language Models pour les réseaux de neurones en général<br>Tokenization et impacts<br>Pour chaque séances plusieurs TP avec PyTorch serons proposés pour manipuler le cours. Les séances restante seront dédiés à la préparation d'une soutenance finale portant sur une ou plusieurs des notions abordées dans les 5 séances.<br><br>Pré-requis obligatoire :<br>Machine Learning et Deep Learning, mathématiques niveau master 1 maths<br><br>Compétences à acquérir :<br>Lecture, implémentation et critique d'un papier de recherche en Machine Learning<br>Utilisation de PyTorch et Latex<br>Capacité de synthèse et de vulgarisation de notions complexe en Machine Learning<br>Culture générale sur le domaines et les acteurs<br>Mode de contrôle des connaissances :<br><br>Soutenance d'un sujet de recherche proposé, avec rédaction d'un rapide compte-rendu, des slides et un notebook.<br><br>Bibliographie-lectures recommandées<br>Machine Learning et Deep Learning<br>Hands-on Machine Learning with Scikit-Learn , Aurélien Géron, O'Reilly<br>Deep Learning avec TensorFlow , Aurélien Géron, O'Reilly<br>Deep Learning with Python , François Chollet, Manning<br>Culture générale<br>Weapons of Math Destruction , Cathy O'Neil, Crown Books<br>Quand la machine apprend , Yann Le Cun, Odile Jacob<br>De l'autre côté de la machine : Voyage d'une scientifique au pays des algorithmes, Aurélie Jean, Édition de l'observatoire<br></p>
+</div>
+<button class="accordion">S4 (parcours Datascience): Data Science pour le Business (21h) -  P. Fisz (Soc Ge) B. Zheng (HSBC), J. Xu (Amundi), B. Gharbi (EY)     </button>
+<div class="panel">
+  <p><br><br></p>
+</div>
+<button class="accordion">S4 (parcours Datascience): Reinforcement Learning (21h) - Gabriel Turinici  (Dauphine) </button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br>1/Introduction au reinforcement learning<br>2/ Formalisme théorique : Markov decision processes (MDP), function valeur (équation de Belman et Hamilton- Jacobi – Bellman) etc.<br>3/ Stratégies usuelles sur l’exemple de “multi-armed bandit”<br>4/ Stratégies en deep learning: Q-learning, DQN<br>5/ Stratégies en deep learning: SARSA et variantes<br>6/ Stratégies en deep learning: Actor-Critic et variantes<br>7/ Implémentations Python variées<br>8/ Perspectives éthiques, problème de l'alignement, approches et applications recentes<br><br>Pré-requis recommandés :<br>tensorflow, keras, pytorch<br><br>Pré-requis obligatoire :<br>python, analyse numérique<br><br>Compétences à acquérir :<br>introduction au deep reinforcement learning, avec une vision machine learning * empirique: principaux algorithmes, implementations pratiques (gym)<br><br>En savoir plus sur le cours :<br>turinici.com<br><br>Bibliographie-lectures recommandées<br>turinici.com<br></p>
+</div>
+<button class="accordion">S4 (parcours Datascience): Machine Learning, Transformer et NLP (18h) - Didier Jeannel (SNECMA)     </button>
+<div class="panel">
+  <p>Description du contenu de l'enseignement :<br><br>1. Introduction au Traitement Automatique du Langage Naturel (NLP)<br>Définition et enjeux du NLP.<br>Applications du NLP dans l ’ industrie et la recherche.<br>Évolution des approches NLP : des modèles classiques aux Transformers<br><br>2. Modélisation des Textes<br>Représentation des textes : Bag of Words, TF-IDF.<br>Limites des représentations classiques.<br>Introduction aux Word Embeddings<br><br>3. Pré-traitement du Texte<br>Tokenization : règles et techniques<br>Utilisation des expressions régulières (REGEX) pour le nettoyage des textes<br>Stemming et lemmatisation : différences et usages<br>Suppression des stopwords et normalisation des textes<br><br>4. Techniques de Word Embeddings<br>Introduction aux embeddings contextuels et statiques<br>Présentation des modèles GloVe et Word2Vec<br>Comparaison et utilisation des embeddings dans le NLP<br><br>5. Sentiment Analysis<br>Utilisation des lexiques de sentiments<br>Visualisation des sentiments avec des graphiques<br>Approches non supervisées pour l ’ analyse des sentiments<br>Classification Naïve Bayes appliquée à l ’ analyse de sentiments<br><br>6. Introduction aux Transformers<br>Architecture des Transformers : concepts clés<br>Attention et auto-attention : mécanismes et visualisation<br>Applications générales des Transformers (traduction, résumé, génération de texte)<br>Présentation de l ’ environnement Hugging Face<br><br>7. Utilisation des Transformers<br>Panorama des modèles de Transformers : BERT, GPT, T5, etc.<br>Visualisation des mécanismes d ’ attention<br>Entraînement et fine-tuning d ’ un Transformer<br>Pipelines NLP avec Hugging Face : classification, résumé, traduction<br><br>8. Application aux Résumés de Texte<br>Types de résumé automatique : extractif vs. abstractive<br>Comparaison des modèles de résumé<br>Métriques d ’ évaluation : ROUGE, BLEU, METEOR<br>Implémentation pratique d ’ un modèle de résumé avec Transformers<br><br>9. Projet Final et Évaluation<br>Mise en œuvre d ’ un projet appliqué utilisant les Transformers<br>Présentation des résultats et discussion<br><br>Compétences à acquérir :<br>Comprendre des NLPs et les Transformers<br></p>
+</div>
+
+<!-- Séparateur avec intitulé -->
+<div class="separator-with-title"> Conférences </div>
+
+<!-- Rubrique 2 -->
+<button class="accordion">Valorisation d'entreprise et Corporate Finance - Alireza Zaimi (Atlantic Permanent)       </button>
+<div class="panel">
+  <p><br></p>
+</div>
+<button class="accordion">Measuring and Maximizing Shareholder Value - Xavier Botteri (Paraconic)       </button>
+<div class="panel">
+  <p><br></p>
+</div>
+<button class="accordion">Produits structurés et dérivés actions - A. Harang (HSBC)        </button>
+<div class="panel">
+  <p><br></p>
+</div>
+<button class="accordion">Reassurance  - Ruben Galloula (Hannover Re)        </button>
+<div class="panel">
+  <p><br></p>
+</div>
+<button class="accordion"> TBC : Tomothee Consigny (H20)        </button>
+<div class="panel">
+  <p><br></p>
+</div>
+<button class="accordion"> TBC : Thomas Raffinot  (QRT)        </button>
+<div class="panel">
+  <p><br></p>
+</div>
+<button class="accordion"> TBC : Algo Trading (BNP Paribas)        </button>
+<div class="panel">
+  <p><br></p>
+</div>
+<button class="accordion"> TBC : Conférence des anciens       </button>
+<div class="panel">
+  <p><br></p>
+</div>
+
+<script>
+  const accordions = document.querySelectorAll(".accordion");
+  const originalPanelContents = {};
+
+  // Stocker le HTML original
+  accordions.forEach(acc => {
+    const panel = acc.nextElementSibling;
+    originalPanelContents[acc.textContent] = panel.innerHTML;
+
+    acc.addEventListener("click", function() {
+      const currentPanel = this.nextElementSibling;
+      currentPanel.style.display = (currentPanel.style.display === "block") ? "none" : "block";
+    });
+  });
+
+  // --- Fonction de recherche ---
+  const searchBox = document.getElementById("searchBox");
+  searchBox.addEventListener("input", function() {
+    const query = this.value.toLowerCase();
+
+    accordions.forEach(acc => {
+      const panel = acc.nextElementSibling;
+      const originalHtml = originalPanelContents[acc.textContent];
+
+      // Toujours repartir de l’original
+      panel.innerHTML = originalHtml;
+
+      // zone de recherche
+      const lowerHtml = originalHtml.toLowerCase();
+
+      if (query) {
+        if (lowerHtml.includes(query)) {
+          panel.style.display = "block";
+
+          // protéger caractères spéciaux
+          const safeQuery = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+          // créer regex
+          const regex = new RegExp(safeQuery, "gi");
+
+          // surlignage
+          panel.innerHTML = originalHtml.replace(regex, match => `<mark>${match}</mark>`);
+
+        } else {
+          panel.style.display = "none";
+        }
+      } else {
+        // si barre vide : revenir à l'état original
+        panel.innerHTML = originalHtml;
+        panel.style.display = "none";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
